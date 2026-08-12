@@ -1,0 +1,2278 @@
+/* =========================================
+   HSE ZONA SUL
+   STYLE.CSS
+========================================= */
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: #17221b;
+
+    background: #ffffff;
+
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* ================= CORES ================= */
+
+:root {
+
+    --verde: #087443;
+
+    --verde-escuro: #04532f;
+
+    --verde-claro: #eaf7ef;
+
+    --azul: #123b56;
+
+    --azul-escuro: #08283b;
+
+    --branco: #ffffff;
+
+    --cinza: #f5f7f6;
+
+    --texto: #17221b;
+
+    --texto-claro: #65726b;
+
+    --borda: #e4eae6;
+
+    --whatsapp: #25D366;
+
+    --sombra:
+        0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================= CONTAINER ================= */
+
+.container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+
+    width: 100%;
+
+    height: 82px;
+
+    background:
+        rgba(255,255,255,0.97);
+
+    border-bottom:
+        1px solid var(--borda);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    backdrop-filter:
+        blur(10px);
+}
+
+.header-container {
+
+    height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+/* LOGO */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-weight: 800;
+}
+
+.logo-main {
+
+    color: var(--verde);
+
+    font-size: 28px;
+
+    letter-spacing: -1px;
+}
+
+.logo-sub {
+
+    color: var(--azul);
+
+    font-size: 15px;
+
+    border-left:
+        1px solid #ccd5d0;
+
+    padding-left: 10px;
+}
+
+
+/* NAV */
+
+.nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.nav a {
+
+    position: relative;
+
+    color: #26352d;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    padding: 10px 0;
+
+    transition: 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+
+    color: var(--verde);
+}
+
+.nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--verde);
+
+    transition: 0.3s;
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+
+    width: 100%;
+}
+
+
+/* ================= BOTÕES ================= */
+
+.btn-primary,
+.btn-outline,
+.btn-whatsapp {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+
+/* PRINCIPAL */
+
+.btn-primary {
+
+    gap: 14px;
+
+    padding: 15px 24px;
+
+    background: var(--verde);
+
+    color: var(--branco);
+}
+
+.btn-primary:hover {
+
+    background: var(--verde-escuro);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* OUTLINE */
+
+.btn-outline {
+
+    padding: 14px 22px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.5);
+
+    color: var(--branco);
+}
+
+.btn-outline:hover {
+
+    background: var(--branco);
+
+    color: var(--azul);
+}
+
+
+/* WHATSAPP */
+
+.btn-whatsapp {
+
+    padding: 12px 20px;
+
+    background: var(--verde);
+
+    color: var(--branco);
+}
+
+.btn-whatsapp:hover {
+
+    background: var(--verde-escuro);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* ================= MENU MOBILE ================= */
+
+.menu-toggle {
+
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--azul);
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    min-height: 720px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    background-image:
+        url("imagens\NEW TECK EMERGENCIA.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    overflow: hidden;
+}
+
+
+/* SOBREPOSIÇÃO */
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3,29,20,0.96),
+            rgba(3,29,20,0.78),
+            rgba(3,29,20,0.32)
+        );
+}
+
+
+/* CONTEÚDO */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: var(--branco);
+
+    padding: 90px 0;
+}
+
+
+/* BADGE */
+
+.hero-badge {
+
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    margin-bottom: 22px;
+
+    border:
+        1px solid
+        rgba(110,220,160,0.5);
+
+    border-radius: 50px;
+
+    background:
+        rgba(100,210,150,0.08);
+
+    color: #8ce2ae;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+}
+
+
+/* SUBTÍTULO */
+
+.hero-subtitle {
+
+    color: #72d69c;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+
+/* TÍTULO */
+
+.hero h1 {
+
+    max-width: 800px;
+
+    font-size:
+        clamp(48px, 7vw, 82px);
+
+    line-height: 1.02;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 28px;
+}
+
+.hero h1 span {
+
+    display: block;
+
+    color: #6cdb9b;
+}
+
+
+/* DESCRIÇÃO */
+
+.hero-description {
+
+    max-width: 650px;
+
+    color: #dce9e2;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 38px;
+}
+
+
+/* BOTÕES HERO */
+
+.hero-buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+}
+
+
+/* INFORMAÇÕES */
+
+.hero-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 70px;
+}
+
+.hero-info-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.hero-info-item strong {
+
+    color: var(--branco);
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+}
+
+.hero-info-item span {
+
+    color: #a9bbb2;
+
+    font-size: 12px;
+}
+
+.hero-divider {
+
+    width: 1px;
+
+    height: 35px;
+
+    background:
+        rgba(255,255,255,0.2);
+}
+
+
+/* ================= TÍTULOS ================= */
+
+.section-title {
+
+    margin-bottom: 50px;
+}
+
+.section-title p {
+
+    color: var(--verde);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+.section-title h2 {
+
+    color: var(--azul);
+
+    font-size: 40px;
+
+    line-height: 1.15;
+}
+
+.section-title h2 span {
+
+    color: var(--verde);
+}
+
+
+/* ================= SOBRE ================= */
+
+.about {
+
+    padding: 110px 0;
+
+    background: var(--branco);
+}
+
+.about-content {
+
+    max-width: 800px;
+}
+
+.about-content h3 {
+
+    color: var(--azul);
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+.about-content p {
+
+    color: var(--texto-claro);
+
+    font-size: 17px;
+
+    margin-bottom: 15px;
+}
+
+.read-more {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: var(--verde);
+
+    font-weight: 800;
+}
+
+
+/* ================= FORMAÇÕES ================= */
+
+.courses {
+
+    padding: 110px 0;
+
+    background: var(--cinza);
+}
+
+.courses-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.course-card {
+
+    background: var(--branco);
+
+    padding: 30px;
+
+    border:
+        1px solid var(--borda);
+
+    border-radius: 10px;
+
+    box-shadow: var(--sombra);
+
+    transition: 0.3s;
+}
+
+.course-card:hover {
+
+    transform:
+        translateY(-8px);
+}
+
+.course-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--verde-claro);
+
+    border-radius: 10px;
+
+    font-size: 28px;
+
+    margin-bottom: 25px;
+}
+
+.course-card h3 {
+
+    color: var(--azul);
+
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+.course-card p {
+
+    color: var(--texto-claro);
+
+    font-size: 15px;
+
+    margin-bottom: 20px;
+}
+
+.course-card a {
+
+    color: var(--verde);
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+
+/* ================= CTA ================= */
+
+.cta {
+
+    padding: 100px 0;
+
+    text-align: center;
+
+    color: var(--branco);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--verde-escuro),
+            var(--azul-escuro)
+        );
+}
+
+.cta-label {
+
+    color: #79dca2;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.cta h2 {
+
+    max-width: 750px;
+
+    margin:
+        0 auto 15px;
+
+    font-size: 40px;
+
+    line-height: 1.2;
+}
+
+.cta p {
+
+    color: #dceae3;
+
+    margin-bottom: 30px;
+}
+
+.cta .btn-whatsapp {
+
+    background: var(--branco);
+
+    color: var(--verde);
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+
+    padding-top: 60px;
+
+    background: #071d16;
+
+    color: var(--branco);
+}
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 50px;
+
+    padding-bottom: 50px;
+}
+
+.footer h3 {
+
+    color: #6dd89c;
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+}
+
+.footer h4 {
+
+    margin-bottom: 15px;
+}
+
+.footer p,
+.footer a {
+
+    display: block;
+
+    color: #b8c8c0;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+.footer a:hover {
+
+    color: #6dd89c;
+}
+
+.copyright {
+
+    padding: 20px;
+
+    text-align: center;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.1);
+}
+
+
+/* ================= WHATSAPP FLUTUANTE ================= */
+
+.whatsapp-floating {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    z-index: 2000;
+
+    background: var(--whatsapp);
+
+    color: var(--branco);
+
+    padding: 15px 20px;
+
+    border-radius: 50px;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,0.20);
+
+    transition: 0.3s;
+}
+
+.whatsapp-floating:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+}
+
+
+/* ================= RESPONSIVIDADE ================= */
+
+@media (max-width: 1000px) {
+
+    .courses-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .nav {
+
+        gap: 18px;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .header,
+    .header-container {
+
+        height: 70px;
+    }
+
+    .nav {
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: var(--branco);
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0;
+
+        padding: 10px 5%;
+
+        border-bottom:
+            1px solid var(--borda);
+
+        box-shadow:
+            0 10px 25px
+            rgba(0,0,0,0.08);
+    }
+
+    .nav.active {
+
+        display: flex;
+    }
+
+    .nav a {
+
+        width: 100%;
+
+        padding: 15px 0;
+
+        border-bottom:
+            1px solid #edf0ee;
+    }
+
+    .nav a::after {
+
+        display: none;
+    }
+
+    .header-whatsapp {
+
+        display: none;
+    }
+
+    .menu-toggle {
+
+        display: block;
+    }
+
+    .hero {
+
+        min-height: 680px;
+    }
+
+    .hero-content {
+
+        padding: 70px 0;
+    }
+
+    .hero h1 {
+
+        font-size: 48px;
+    }
+
+    .hero-description {
+
+        font-size: 16px;
+    }
+
+    .hero-info {
+
+        gap: 15px;
+
+        margin-top: 50px;
+
+        flex-wrap: wrap;
+    }
+
+    .hero-divider {
+
+        display: none;
+    }
+
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .container {
+
+        width: 92%;
+    }
+
+    .logo-main {
+
+        font-size: 24px;
+    }
+
+    .logo-sub {
+
+        font-size: 13px;
+    }
+
+    .hero {
+
+        min-height: 700px;
+    }
+
+    .hero-badge {
+
+        font-size: 9px;
+
+        letter-spacing: 1px;
+    }
+
+    .hero h1 {
+
+        font-size: 42px;
+    }
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .btn-primary,
+    .btn-outline {
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .hero-info {
+
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        margin-top: 45px;
+    }
+
+    .section-title h2 {
+
+        font-size: 32px;
+    }
+
+    .courses-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .cta h2 {
+
+        font-size: 30px;
+    }
+
+    .whatsapp-floating {
+
+        right: 15px;
+
+        bottom: 15px;
+
+        padding:
+            13px 17px;
+    }
+}
+/* =========================================
+   PÁGINA DE FORMAÇÕES
+========================================= */
+
+.page-hero {
+
+    min-height: 390px;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #063d28,
+            #08283b
+        );
+
+    color: #ffffff;
+}
+
+.page-label {
+
+    color: #75dca2;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.page-hero h1 {
+
+    font-size:
+        clamp(45px, 6vw, 70px);
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+.page-hero h1 span {
+
+    color: #6cdb9b;
+}
+
+.page-hero p:last-child {
+
+    max-width: 650px;
+
+    color: #d7e8df;
+
+    font-size: 17px;
+}
+
+
+/* INTRODUÇÃO */
+
+.courses-intro {
+
+    padding: 90px 0 40px;
+
+    background: #ffffff;
+}
+
+.intro-text {
+
+    max-width: 850px;
+
+    color: #65726b;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* TODOS OS CURSOS */
+
+.all-courses {
+
+    padding: 50px 0 110px;
+
+    background: #f5f7f6;
+}
+
+.all-courses-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* CARD */
+
+.course-large {
+
+    display: flex;
+
+    gap: 25px;
+
+    background: #ffffff;
+
+    padding: 32px;
+
+    border:
+        1px solid #e3e9e5;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.05);
+}
+
+.course-large:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(0,0,0,0.09);
+}
+
+
+/* ÍCONE */
+
+.course-large-icon {
+
+    min-width: 65px;
+
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eaf7ef;
+
+    font-size: 30px;
+}
+
+
+/* CONTEÚDO */
+
+.course-large-content {
+
+    flex: 1;
+}
+
+.course-number {
+
+    color: #087443;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.course-large h2 {
+
+    color: #123b56;
+
+    font-size: 23px;
+
+    line-height: 1.25;
+
+    margin: 7px 0 12px;
+}
+
+.course-large p {
+
+    color: #65726b;
+
+    font-size: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+/* DETALHES */
+
+.course-details {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-bottom: 22px;
+}
+
+.course-details span {
+
+    color: #52625a;
+
+    font-size: 13px;
+}
+
+
+/* BOTÃO DO CURSO */
+
+.course-whatsapp {
+
+    display: inline-block;
+
+    color: #087443;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    transition: 0.3s;
+}
+
+.course-whatsapp:hover {
+
+    color: #04532f;
+
+    transform:
+        translateX(4px);
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .all-courses-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .page-hero {
+
+        min-height: 340px;
+    }
+
+    .page-hero h1 {
+
+        font-size: 46px;
+    }
+
+    .course-large {
+
+        flex-direction: column;
+
+        padding: 25px;
+    }
+
+    .course-large-icon {
+
+        width: 60px;
+
+        height: 60px;
+    }
+
+}
+/* =========================================
+   FORMAÇÕES - NOVO LAYOUT
+========================================= */
+
+.formation-heading {
+    margin-bottom: 45px;
+}
+
+.formation-tag {
+    display: inline-block;
+
+    padding: 7px 13px;
+
+    margin-bottom: 14px;
+
+    border-radius: 30px;
+
+    background: #eaf7ef;
+
+    color: #087443;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.formation-heading h2 {
+    color: #123b56;
+
+    font-size: 40px;
+
+    line-height: 1.15;
+
+    margin-bottom: 12px;
+}
+
+.formation-heading h2 span {
+    color: #087443;
+}
+
+.formation-heading p {
+    max-width: 650px;
+
+    color: #65726b;
+
+    font-size: 16px;
+}
+
+
+/* GRID DE FORMAÇÕES */
+
+.formation-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* CARD */
+
+.formation-card {
+
+    position: relative;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e9e5;
+
+    border-radius: 12px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,0.05);
+
+    transition: 0.3s;
+
+    overflow: hidden;
+}
+
+.formation-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 4px;
+
+    height: 100%;
+
+    background: #087443;
+
+    transform: scaleY(0);
+
+    transform-origin: bottom;
+
+    transition: 0.3s;
+}
+
+.formation-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 18px 35px
+        rgba(0,0,0,0.09);
+}
+
+.formation-card:hover::before {
+
+    transform: scaleY(1);
+}
+
+
+/* ÍCONE */
+
+.formation-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eaf7ef;
+
+    border-radius: 10px;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+}
+
+
+/* NÚMERO */
+
+.formation-number {
+
+    color: #087443;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+/* TÍTULO */
+
+.formation-card h3 {
+
+    color: #123b56;
+
+    font-size: 20px;
+
+    line-height: 1.3;
+
+    margin: 6px 0 10px;
+}
+
+.formation-card p {
+
+    color: #65726b;
+
+    font-size: 14px;
+
+    min-height: 48px;
+
+    margin-bottom: 18px;
+}
+
+
+/* BOTÃO */
+
+.formation-card .course-whatsapp {
+
+    display: inline-block;
+
+    color: #087443;
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+.formation-card .course-whatsapp:hover {
+
+    color: #04532f;
+}
+
+
+/* =========================================
+   OFFSHORE
+========================================= */
+
+.offshore-section {
+
+    padding: 110px 0;
+
+    background:
+        #ffffff;
+}
+
+.offshore-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.offshore-card {
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #08283b,
+            #0b4938
+        );
+
+    color: #ffffff;
+
+    transition: 0.3s;
+}
+
+.offshore-card:hover {
+
+    transform:
+        translateY(-5px);
+}
+
+.offshore-card span {
+
+    display: block;
+
+    color: #72d69c;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    margin-bottom: 15px;
+}
+
+.offshore-card h3 {
+
+    font-size: 19px;
+
+    margin-bottom: 25px;
+}
+
+.offshore-card .course-whatsapp {
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+.offshore-card .course-whatsapp:hover {
+
+    color: #72d69c;
+}
+
+
+/* =========================================
+   OPORTUNIDADES
+========================================= */
+
+.opportunities {
+
+    padding: 110px 0;
+
+    background: #f5f7f6;
+}
+
+.opportunities-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.opportunity-card {
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #e2e9e5;
+
+    border-radius: 10px;
+}
+
+.opportunity-card > span {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 40px;
+
+    height: 40px;
+
+    margin-bottom: 18px;
+
+    border-radius: 50%;
+
+    background: #eaf7ef;
+
+    color: #087443;
+
+    font-weight: 900;
+}
+
+.opportunity-card h3 {
+
+    color: #123b56;
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+.opportunity-card p {
+
+    color: #65726b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .formation-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .offshore-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .opportunities-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .formation-heading h2 {
+
+        font-size: 32px;
+    }
+
+    .formation-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .offshore-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .opportunities-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .formation-card {
+
+        padding: 24px;
+    }
+
+}
+/* =========================================
+   SOBRE NÓS
+========================================= */
+
+.about-main {
+
+    padding: 110px 0;
+
+    background: #ffffff;
+}
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.about-image img {
+
+    width: 100%;
+
+    display: block;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.12);
+}
+
+.about-content h2 {
+
+    color: #123b56;
+
+    font-size: 42px;
+
+    line-height: 1.15;
+
+    margin: 15px 0 25px;
+}
+
+.about-content h2 span {
+
+    color: #087443;
+}
+
+.about-content p {
+
+    color: #65726b;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+.about-button {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 13px 20px;
+
+    border-radius: 6px;
+
+    background: #087443;
+
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+
+/* MISSÃO */
+
+.mission-section {
+
+    padding: 110px 0;
+
+    background: #f5f7f6;
+}
+
+.mission-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.mission-card {
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    border:
+        1px solid #e3e9e5;
+}
+
+.mission-icon {
+
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+.mission-card h3 {
+
+    color: #123b56;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+.mission-card p {
+
+    color: #65726b;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+
+/* ÁREAS */
+
+.areas-section {
+
+    padding: 110px 0;
+
+    background: #ffffff;
+}
+
+.areas-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.area-item {
+
+    padding: 30px;
+
+    border:
+        1px solid #e2e9e5;
+
+    border-radius: 10px;
+}
+
+.area-item > span {
+
+    font-size: 30px;
+}
+
+.area-item h3 {
+
+    color: #123b56;
+
+    margin: 18px 0 10px;
+}
+
+.area-item p {
+
+    color: #65726b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* OPORTUNIDADES SOBRE */
+
+.about-opportunities {
+
+    padding: 100px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #062d3f,
+            #087443
+        );
+
+    color: #ffffff;
+}
+
+.opportunities-content {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.opportunities-content h2 {
+
+    font-size: 40px;
+
+    line-height: 1.2;
+
+    margin: 15px 0 20px;
+}
+
+.opportunities-content h2 span {
+
+    color: #75dca2;
+}
+
+.opportunities-content p {
+
+    color: #d9e9e1;
+
+    line-height: 1.8;
+}
+
+.opportunities-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.opportunities-list div {
+
+    padding: 17px 20px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    border-radius: 7px;
+
+    color: #ffffff;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .about-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .mission-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .areas-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .opportunities-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .about-content h2 {
+
+        font-size: 32px;
+    }
+
+    .areas-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================================
+   CONTACTOS
+========================================= */
+
+.contact-section {
+    padding: 110px 0;
+    background: #f5f7f6;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.contact-info h2 {
+    color: #123b56;
+    font-size: 42px;
+    line-height: 1.15;
+    margin: 15px 0 20px;
+}
+
+.contact-info h2 span {
+    color: #087443;
+}
+
+.contact-info > p {
+    color: #65726b;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf7ef;
+    border-radius: 8px;
+
+    font-size: 22px;
+}
+
+.contact-item strong {
+    display: block;
+    color: #123b56;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    margin: 2px 0;
+    color: #65726b;
+    font-size: 14px;
+}
+
+.contact-whatsapp {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+
+/* FORMULÁRIO */
+
+.contact-form-box {
+    padding: 40px;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.07);
+}
+
+.contact-form-box h3 {
+    color: #123b56;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.contact-form-box > p {
+    color: #65726b;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #123b56;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border:
+        1px solid #dce5df;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: #333;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #087443;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(8,116,67,0.08);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-submit {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #087443;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.form-submit:hover {
+    background: #065d36;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 850px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .contact-info h2 {
+        font-size: 32px;
+    }
+
+    .contact-form-box {
+        padding: 25px;
+    }
+
+}
